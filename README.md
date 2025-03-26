@@ -33,6 +33,7 @@ Este projeto tem como objetivo configurar um ambiente na AWS para hospedar um se
 5. Configure a rede usando a VPC e a subnet pública.
 6. Associe o Security Group criado anteriormente.
 7. Gere ou forneça um par de chaves para acessar via SSH.
+![image](https://github.com/user-attachments/assets/88b0173c-4bc0-47ca-a409-6830365ae722)
 
 ### 2.2 Conectar na Instância
 Após iniciar a instância, conecte-se via SSH:

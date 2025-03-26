@@ -74,11 +74,23 @@ Adicione o código:
 ```sh
 #!/bin/bash
 
-URL="https://discord.com/api/webhooks/SEU_WEBHOOK_AQUI"
-STATUS=$(systemctl is-active nginx)
+URL="SEU IP PUBLICO"
+WEBHOOK_URL="https://discord.com/api/webhooks/SEU_WEBHOOK_AQUI"
+LOG_FILE="/home/ubuntu/meu_script.log"
+DATA_HORA=$(date '+%Y-%m-%d %H:%M:%S')
 
-if [ "$STATUS" != "active" ]; then
-    curl -H "Content-Type: application/json" -X POST -d '{"content":"🚨 O servidor NGINX parou!"}' "$URL"
+STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
+
+if [ "$STATUS" -ne 200 ]; then
+  echo "$DATA_HORA - Site fora do ar! Código: $STATUS" >> "$LOG_FILE"
+  
+  curl -H "Content-Type: application/json" \
+       -X POST \
+       -d "{\"content\": \":rotating_light: ALERTA: O site está fora do ar!\"}" \
+       "$WEBHOOK_URL"
+else
+  echo "$DATA_HORA - Site OK (Código: $STATUS)" >> "$LOG_FILE"
+
 fi
 ```
 
@@ -117,12 +129,6 @@ Adicione a linha abaixo para rodar a cada minuto:
 ---
 ## 🚀 Conclusão
 Este projeto mostra como configurar um servidor web na AWS e implementar um sistema de monitoramento automático com notificações no Discord via Webhook. Com isso, é possível acompanhar a disponibilidade do serviço Nginx e agir rapidamente em caso de falhas.
-
-📌 **Próximos Passos:**
-- Adicionar prints do processo.
-- Melhorar o script para reiniciar automaticamente o serviço em caso de falha.
-- Implementar logging para auditoria das verificações.
-
 ---
 ✍️ **Autor:** [Seu Nome]  
 📅 **Última Atualização:** [Data de Hoje]

@@ -11,24 +11,16 @@ Este projeto tem como objetivo configurar um ambiente na AWS para hospedar um se
 2. Vá até "VPC" e clique em "Create VPC".
 3. Escolha um nome para a VPC e configure a faixa de IPs conforme necessário (exemplo: `10.0.0.0/16`).
 ![1 1](https://github.com/user-attachments/assets/37628480-3869-4f28-ab92-db2f3f41ccbf)
-![1 2](https://github.com/user-attachments/assets/d1809505-59a4-4a3a-b5d2-feed4cac9fce)
-![1 3](https://github.com/user-attachments/assets/61c352ff-74a6-4436-8dfb-229bf16be7f3)
+
+
 
 ### 1.2 Criar Subnets
 1. Dentro da VPC, crie duas subnets:
    - **Pública**: para a instância EC2 acessível via internet.
    - **Privada**: caso precise de instâncias internas sem acesso direto.
+![1 2](https://github.com/user-attachments/assets/d1809505-59a4-4a3a-b5d2-feed4cac9fce)
 
-### 1.3 Criar e Configurar o Internet Gateway
-1. Vá até "Internet Gateway" e clique em "Create IGW".
-2. Associe o Internet Gateway à VPC criada.
-3. Atualize a Tabela de Rotas para permitir tráfego externo.
-
-### 1.4 Criar um Security Group
-1. Vá até "Security Groups" e crie um novo grupo.
-2. Configure as regras:
-   - **Entrada**: Permitir tráfego nas portas 22 (SSH), 80 (HTTP).
-   - **Saída**: Liberar todo o tráfego.
+![1 3](https://github.com/user-attachments/assets/61c352ff-74a6-4436-8dfb-229bf16be7f3)
 
 ---
 ## 🏗️ 2. Criando e Configurando o Servidor Web

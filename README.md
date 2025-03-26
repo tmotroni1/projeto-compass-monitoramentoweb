@@ -56,11 +56,22 @@ Verifique se o serviço está rodando:
 sudo systemctl status nginx
 ```
 
-Crie uma página de teste:
+Crie arquivos index.html para cada site:
+/var/www/html/index.html
 ```sh
-echo "<h1>Servidor NGINX Funcionando!</h1>" | sudo tee /var/www/html/index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITE 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Bem Vindo ao Site 1</h1>
+</body>
+</html>
 ```
-
 ---
 ## 📊 3. Criando o Script de Monitoramento
 

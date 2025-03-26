@@ -10,6 +10,9 @@ Este projeto tem como objetivo configurar um ambiente na AWS para hospedar um se
 1. Acesse o [AWS Console](https://aws.amazon.com/console/).
 2. Vá até "VPC" e clique em "Create VPC".
 3. Escolha um nome para a VPC e configure a faixa de IPs conforme necessário (exemplo: `10.0.0.0/16`).
+![1 1](https://github.com/user-attachments/assets/37628480-3869-4f28-ab92-db2f3f41ccbf)
+![1 2](https://github.com/user-attachments/assets/d1809505-59a4-4a3a-b5d2-feed4cac9fce)
+![1 3](https://github.com/user-attachments/assets/61c352ff-74a6-4436-8dfb-229bf16be7f3)
 
 ### 1.2 Criar Subnets
 1. Dentro da VPC, crie duas subnets:

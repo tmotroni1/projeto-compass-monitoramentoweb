@@ -137,5 +137,4 @@ Adicione a linha abaixo para rodar a cada minuto:
 ## 🚀 Conclusão
 Este projeto mostra como configurar um servidor web na AWS e implementar um sistema de monitoramento automático com notificações no Discord via Webhook. Com isso, é possível acompanhar a disponibilidade do serviço Nginx e agir rapidamente em caso de falhas.
 ---
-✍️ **Autor:** [Seu Nome]  
-📅 **Última Atualização:** [Data de Hoje]
+✍️ **Autor:** Thiago Salvador Martinez Motroni  

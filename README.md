@@ -124,11 +124,7 @@ Adicione a linha abaixo para rodar a cada minuto:
    ```sh
    sudo systemctl stop nginx
    ```
-2. Execute o script manualmente:
-   ```sh
-   ./monitor.sh
-   ```
-3. Verifique se recebeu a notificação no Discord.
+2. Verifique se recebeu a notificação no Discord.
 
 ### 4.2 Teste Automático via Crontab
 1. Reinicie a instância EC2 e veja se o monitoramento continua funcionando.
